@@ -1,0 +1,56 @@
+!!! 5
+%html{ :lang => 'nl' }
+  %head
+    %title Publicum Films
+    %meta{ :charset => 'utf-8' }
+    %meta{ :name => 'viewport', :content => 'width=device-width,initial-scale=1,maximum-scale=2,minimum-scale=1' }
+    %link{ :rel => 'stylesheet', :media => 'screen,projection', :href => './styles/screen.css' }
+    /[if lte IE 8]
+      %script{ :src => './scripts/sovba.js' }
+
+  %body
+    %header
+      %h1 Publicum Films
+
+      %nav
+        %ul
+          %li
+            %a{ :href => '#filosofie' } Filosofie
+          %li
+            %a{ :href => '#projecten' } Projecten
+          %li
+            %a{ :href => '#contact' } Contact
+
+    %main
+      #filosofie
+        %h1 Filosoﬁe
+
+        %p Open films, voor iedereen.
+
+        %p Het principe van open source software toepassen op films. In wezen zo veel moelijk bronbestanden openbaarmaken in een zo vroeg mogelijk stadium.
+
+        %p Door samenwerking tussen mensen, waar ook ter wereld, kan een solide film worden neergezet.
+
+        %p Kosten die gemaakt worden, zoals fysiek samen te komen en vaste lasten, kan worden bekostigd door een op te richten stichting.
+
+      #projecten
+        %h1 Projecten
+        %ol.films
+          %li
+            %h1 Korte film: Gepasseerd
+            %p.meta Film van circa 4 minuten
+            %p.status Status: script in openbare bewerking
+            %p Bushokje. Een oude man. Een student. Een pittige tante. De locatie en de hoofdpersonages staan vast. Wat gebeurd er als ze tot het uiterste gedreven worden voor de bus arriveert?
+            %p
+              %a{ :href => '#lolwut' } Zie project op GitHub
+
+      #contact
+        %h1 Contact
+
+        %p
+          Mail:
+          %a{ :href => 'mailto:info@publicumfilms.org' } info@publicumfilms.org
+
+        %p
+          Twitter:
+          %a{ :href => 'https://twitter.com/publicumfilms' } @PublicumFilms

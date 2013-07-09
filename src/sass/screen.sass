@@ -1,0 +1,99 @@
+@import 'compass'
+
+$yellow: #FADF0A
+$light-green: #D8F6B6
+$brown: #A3995E
+$orange: #FE9E0C
+$black: #070105
+
+$text-color: mix($orange, $black, 5%)
+$bg-color: mix($yellow, #FFF, 20%)
+$highlight: mix($orange, $black, 70%)
+
+$header-color: mix($yellow, $black, 30%)
+
+
+
+*
+  border: 0
+  font-weight: normal
+  list-style: none
+  margin: 0
+  padding: 0
+
+html
+  height: 100%
+
+body
+  background: $bg-color
+  border: 0.25em solid $light-green
+  color: $text-color
+  font: 125% Sovba, 'Times New Roman', Times, serif
+  min-height: 100%
+  padding: 1em
+
+a
+  color: $highlight
+  +transition(color 1.3s)
+
+  &:hover,
+  &:focus
+    color: $orange
+    +transition(color 0.3s)
+
+strong,
+b
+  font-weight: bold // fake bold
+
+header
+  h1
+    font-size: 4em
+    padding: 0.25em
+    text-align: center
+    text-shadow: 0.0125em 0.0125em $header-color, 0.0125em -0.0125em $header-color, -0.0125em 0.0125em $header-color, -0.0125em -0.0125em $header-color
+
+  nav
+    ul
+      text-align: center
+    
+    li
+      display: inline-block
+
+    a
+      display: block
+      font-size: 1.2em
+      padding: 0.25em 0.5em
+      text-decoration: none
+
+main
+  max-width: 30em
+  margin: 0 auto
+  position: relative
+
+  > div
+    margin: 5em 0
+
+    > h1
+      display: block
+      font-size: 4em
+      margin-bottom: 0.25em
+
+  p
+    line-height: 1.4em
+    margin-bottom: 1.4em
+
+ol.films
+  border-left: 0.5em solid $light-green
+  padding: 1em
+
+  h1
+    font-size: 2em
+
+@media only screen and (min-width: 40em)
+  body
+    border-width: 0.5em
+    padding: 2em
+
+  ol.films
+    border-left-width: 1em
+    padding: 2em
