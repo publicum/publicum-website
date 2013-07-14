@@ -25,8 +25,8 @@ html
   height: 100%
 
 body
-  background: $bg-color url(../images/logo-publicum-whale.svg) no-repeat 50% 1em
-  +background-size(90% auto)
+  +background(url(../images/logo-publicum-whale.svg) no-repeat 50% 1em, linear-gradient($bg-color, rgba(254, 248, 206, 0)) fixed, url(../images/waves.png) fixed, $bg-color)
+  +background-size(90% auto, 100% 100%, auto, auto)
   border: 0.25em solid $light-green
   color: $text-color
   font: 105% 'Times New Roman', Times, serif
@@ -97,7 +97,7 @@ ol.films
 
 @media only screen and (min-width: 43em)
   body
-    +background-size(35em auto)
+    +background-size(35em auto, 100% 100%, auto, auto)
     border-width: 0.5em
     padding: 2em
 
