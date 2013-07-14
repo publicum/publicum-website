@@ -25,12 +25,13 @@ html
   height: 100%
 
 body
-  background: $bg-color
+  background: $bg-color url(../images/logo-publicum-whale.svg) no-repeat 50% 1em
+  +background-size(90% auto)
   border: 0.25em solid $light-green
   color: $text-color
-  font: 125% 'Times New Roman', Times, serif
+  font: 105% 'Times New Roman', Times, serif
   min-height: 100%
-  padding: 1em
+  padding: 0.5em
 
 a
   color: $highlight
@@ -47,7 +48,7 @@ b
 
 header
   h1
-    font-size: 4em
+    font-size: 3em
     padding: 0.25em
     text-align: center
     text-shadow: 0.0125em 0.0125em $header-color, 0.0125em -0.0125em $header-color, -0.0125em 0.0125em $header-color, -0.0125em -0.0125em $header-color
@@ -75,7 +76,7 @@ main
 
     > h1
       display: block
-      font-size: 4em
+      font-size: 3em
       margin-bottom: 0.25em
 
   p
@@ -89,10 +90,23 @@ ol.films
   h1
     font-size: 2em
 
-@media only screen and (min-width: 40em)
+@media only screen and (min-width: 30em)
   body
+    +background-size(30em auto)
+    font-size: 125%
+    padding: 1em
+
+@media only screen and (min-width: 43em)
+  body
+    +background-size(35em auto)
     border-width: 0.5em
     padding: 2em
+
+  header h1
+    font-size: 4em
+
+  main h1
+    font-size: 4em
 
   ol.films
     border-left-width: 1em
