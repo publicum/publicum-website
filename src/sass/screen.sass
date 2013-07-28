@@ -33,6 +33,14 @@ body
   min-height: 100%
   padding: 0.5em
 
+::selection
+  background: $orange
+  color: $bg-color
+
+::-moz-selection
+  background: $orange
+  color: $bg-color
+
 a
   color: $highlight
   +transition(color 1.3s)
@@ -98,7 +106,7 @@ ol.films
 @media only screen and (min-width: 43em)
   body
     +background-size(35em auto, 100% 100%, auto, auto)
-    border-width: 0.5em
+    border-width: 0.75em
     padding: 2em
 
   header h1
